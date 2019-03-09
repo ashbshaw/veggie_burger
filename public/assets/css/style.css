@@ -1,19 +1,36 @@
+body {
+  font-family: sans-serif;
+  color: white;
+  background:url("../images/bobs.gif");
+  background-size: 25%;
+}
+
+.card-body {
+  background-color: rgb(54, 54, 53);
+}
+
 li {
     padding: 5px;
-    margin: 5px;
-    background: #faebd7;
   }
   
-  .label {
+  /* .label {
     font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
+  } */
   
   .form-group {
     margin-bottom: 5px;
   }
+
+  .add_burgers {
+    margin: 20px 0px 20px 0px;
+  }
+
+
+
+
+
+
+
+
+
+  
