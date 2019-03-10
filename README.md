@@ -5,8 +5,7 @@ Eat-Da-Veggie-Burger is a Node.js, Express, Handlebars, and MySQL burger app tha
 
 **Deploy App**
 
-Visit this site to deploy the app:
-
+Visit this site to deploy the app: https://shielded-oasis-76471.herokuapp.com/
 
 
 ## **Technical Details**
