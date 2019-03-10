@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Barrio';
   color: white;
   background:url("../images/bobs.gif");
   background-size: 25%;
@@ -12,10 +12,6 @@ body {
 li {
     padding: 5px;
   }
-  
-  /* .label {
-    font-weight: bold;
-  } */
   
   .form-group {
     margin-bottom: 5px;
