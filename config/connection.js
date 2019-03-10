@@ -1,6 +1,7 @@
-// Set up MySQL connection.
+// Set up MySQL connection
 var mysql = require("mysql");
 
+// Credentials to access database
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -18,5 +19,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-// Export connection for our ORM to use.
+// Export connection for our ORM to use
 module.exports = connection;

@@ -1,10 +1,10 @@
-// Import MySQL connection.
+// Import MySQL connection
 var connection = require("./connection.js");
 
-// Helper function for SQL syntax.
-// Let's say we want to pass 3 values into the mySQL query.
-// In order to write the query, we need 3 question marks.
-// The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
+// Helper function for SQL syntax
+// Let's say we want to pass 3 values into the mySQL query
+// In order to write the query, we need 3 question marks
+// The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string
 // ["?", "?", "?"].toString() => "?,?,?";
 function printQuestionMarks(num) {
   var arr = [];
@@ -21,7 +21,7 @@ function printQuestionMarks(num) {
 function objToSql(ob) {
   var arr = [];
 
-  // loop through the keys and push the key/value as a string int arr
+  // loop through the keys and push the key/value as a string int array
   for (var key in ob) {
     var value = ob[key];
     // check to skip hidden properties
@@ -43,19 +43,19 @@ function objToSql(ob) {
 // Object for all our SQL statement functions.
 var orm = {
   
-  // Select all
+  // Select all from table
   all: function(tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
-      // Call back all selected
+      // Call back all selected and works backwards to burger.js model
       cb(result);
     });
   },
 
-  // Create new
+  // Create new addition to table
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -72,11 +72,11 @@ var orm = {
       if (err) {
         throw err;
       }
-      // Call back new addition
+      // Call back new addition and works backwards to burger.js model
       cb(result);
     });
   },
-  // Update
+  // Update items already in the table
   // An example of objColVals would be {burger_name: blackbean, devoured: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
@@ -91,7 +91,7 @@ var orm = {
       if (err) {
         throw err;
       }
-      // Call back with updated item
+      // Call back with updated item and works backwards to burger.js model
       cb(result);
     });
   },
@@ -104,7 +104,7 @@ var orm = {
       if (err) {
         throw err;
       }
-      // Call back without deleted item
+      // Call back without deleted item and works backwards to burger.js model
       cb(result);
     });
   }
